@@ -10,8 +10,6 @@
 		012FE3C826F80DC900267124 /* FilickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3C726F80DC900267124 /* FilickerApp.swift */; };
 		012FE3CC26F80DCA00267124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012FE3CB26F80DCA00267124 /* Assets.xcassets */; };
 		012FE3CF26F80DCA00267124 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012FE3CE26F80DCA00267124 /* Preview Assets.xcassets */; };
-		012FE3DA26F80DCB00267124 /* FilickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3D926F80DCB00267124 /* FilickerTests.swift */; };
-		012FE3E526F80DCB00267124 /* FilickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3E426F80DCB00267124 /* FilickerUITests.swift */; };
 		012FE3FD26F80EF900267124 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3FC26F80EF900267124 /* PhotoRepository.swift */; };
 		012FE40526F80F1800267124 /* CacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE40426F80F1800267124 /* CacheRepository.swift */; };
 		012FE40B26F80F4E00267124 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE40A26F80F4E00267124 /* Photo.swift */; };
@@ -30,17 +28,14 @@
 		012FE45626F815AC00267124 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45526F815AC00267124 /* SearchResultView.swift */; };
 		012FE45B26F815CF00267124 /* SearchPhotoModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45A26F815CF00267124 /* SearchPhotoModuleBuilder.swift */; };
 		012FE46026F815FA00267124 /* FileCacheServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45F26F815FA00267124 /* FileCacheServices.swift */; };
+		012FE47026F82FE700267124 /* MockPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE46F26F82FE700267124 /* MockPhotoService.swift */; };
+		012FE47526F8301E00267124 /* MockPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE47426F8301E00267124 /* MockPhoto.swift */; };
+		012FE47D26F8336000267124 /* SearchPhotoInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE47C26F8336000267124 /* SearchPhotoInteractorTests.swift */; };
+		012FE48326F8343E00267124 /* MockCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE48226F8343E00267124 /* MockCacheService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		012FE3D626F80DCB00267124 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 012FE3BC26F80DC900267124 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 012FE3C326F80DC900267124;
-			remoteInfo = Filicker;
-		};
-		012FE3E126F80DCB00267124 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 012FE3BC26F80DC900267124 /* Project object */;
 			proxyType = 1;
@@ -56,11 +51,7 @@
 		012FE3CE26F80DCA00267124 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		012FE3D026F80DCA00267124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012FE3D526F80DCB00267124 /* FilickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		012FE3D926F80DCB00267124 /* FilickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilickerTests.swift; sourceTree = "<group>"; };
 		012FE3DB26F80DCB00267124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		012FE3E026F80DCB00267124 /* FilickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		012FE3E426F80DCB00267124 /* FilickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilickerUITests.swift; sourceTree = "<group>"; };
-		012FE3E626F80DCB00267124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012FE3FC26F80EF900267124 /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
 		012FE40426F80F1800267124 /* CacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheRepository.swift; sourceTree = "<group>"; };
 		012FE40A26F80F4E00267124 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -78,6 +69,10 @@
 		012FE45526F815AC00267124 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		012FE45A26F815CF00267124 /* SearchPhotoModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoModuleBuilder.swift; sourceTree = "<group>"; };
 		012FE45F26F815FA00267124 /* FileCacheServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCacheServices.swift; sourceTree = "<group>"; };
+		012FE46F26F82FE700267124 /* MockPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoService.swift; sourceTree = "<group>"; };
+		012FE47426F8301E00267124 /* MockPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhoto.swift; sourceTree = "<group>"; };
+		012FE47C26F8336000267124 /* SearchPhotoInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoInteractorTests.swift; sourceTree = "<group>"; };
+		012FE48226F8343E00267124 /* MockCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCacheService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		012FE3DD26F80DCB00267124 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,7 +99,6 @@
 			children = (
 				012FE3C626F80DC900267124 /* Filicker */,
 				012FE3D826F80DCB00267124 /* FilickerTests */,
-				012FE3E326F80DCB00267124 /* FilickerUITests */,
 				012FE3C526F80DC900267124 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +108,6 @@
 			children = (
 				012FE3C426F80DC900267124 /* Filicker.app */,
 				012FE3D526F80DCB00267124 /* FilickerTests.xctest */,
-				012FE3E026F80DCB00267124 /* FilickerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,19 +137,11 @@
 		012FE3D826F80DCB00267124 /* FilickerTests */ = {
 			isa = PBXGroup;
 			children = (
-				012FE3D926F80DCB00267124 /* FilickerTests.swift */,
+				012FE47A26F8333E00267124 /* SearchPhotoModule */,
+				012FE46D26F82F9600267124 /* DomainTests */,
 				012FE3DB26F80DCB00267124 /* Info.plist */,
 			);
 			path = FilickerTests;
-			sourceTree = "<group>";
-		};
-		012FE3E326F80DCB00267124 /* FilickerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				012FE3E426F80DCB00267124 /* FilickerUITests.swift */,
-				012FE3E626F80DCB00267124 /* Info.plist */,
-			);
-			path = FilickerUITests;
 			sourceTree = "<group>";
 		};
 		012FE3F926F80ED400267124 /* Domain */ = {
@@ -252,6 +230,48 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		012FE46D26F82F9600267124 /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				012FE47326F8300200267124 /* Entities */,
+				012FE46E26F82FC600267124 /* ServicesTests */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		012FE46E26F82FC600267124 /* ServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				012FE46F26F82FE700267124 /* MockPhotoService.swift */,
+				012FE48226F8343E00267124 /* MockCacheService.swift */,
+			);
+			path = ServicesTests;
+			sourceTree = "<group>";
+		};
+		012FE47326F8300200267124 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				012FE47426F8301E00267124 /* MockPhoto.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		012FE47A26F8333E00267124 /* SearchPhotoModule */ = {
+			isa = PBXGroup;
+			children = (
+				012FE47B26F8334400267124 /* InteractorTests */,
+			);
+			path = SearchPhotoModule;
+			sourceTree = "<group>";
+		};
+		012FE47B26F8334400267124 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				012FE47C26F8336000267124 /* SearchPhotoInteractorTests.swift */,
+			);
+			path = InteractorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,24 +314,6 @@
 			productReference = 012FE3D526F80DCB00267124 /* FilickerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		012FE3DF26F80DCB00267124 /* FilickerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 012FE3EF26F80DCB00267124 /* Build configuration list for PBXNativeTarget "FilickerUITests" */;
-			buildPhases = (
-				012FE3DC26F80DCB00267124 /* Sources */,
-				012FE3DD26F80DCB00267124 /* Frameworks */,
-				012FE3DE26F80DCB00267124 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				012FE3E226F80DCB00267124 /* PBXTargetDependency */,
-			);
-			name = FilickerUITests;
-			productName = FilickerUITests;
-			productReference = 012FE3E026F80DCB00267124 /* FilickerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,10 +328,7 @@
 					};
 					012FE3D426F80DCB00267124 = {
 						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 012FE3C326F80DC900267124;
-					};
-					012FE3DF26F80DCB00267124 = {
-						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = 012FE3C326F80DC900267124;
 					};
 				};
@@ -352,7 +351,6 @@
 			targets = (
 				012FE3C326F80DC900267124 /* Filicker */,
 				012FE3D426F80DCB00267124 /* FilickerTests */,
-				012FE3DF26F80DCB00267124 /* FilickerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -368,13 +366,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		012FE3D326F80DCB00267124 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		012FE3DE26F80DCB00267124 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -434,15 +425,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012FE3DA26F80DCB00267124 /* FilickerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		012FE3DC26F80DCB00267124 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				012FE3E526F80DCB00267124 /* FilickerUITests.swift in Sources */,
+				012FE48326F8343E00267124 /* MockCacheService.swift in Sources */,
+				012FE47526F8301E00267124 /* MockPhoto.swift in Sources */,
+				012FE47D26F8336000267124 /* SearchPhotoInteractorTests.swift in Sources */,
+				012FE47026F82FE700267124 /* MockPhotoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,11 +439,6 @@
 			isa = PBXTargetDependency;
 			target = 012FE3C326F80DC900267124 /* Filicker */;
 			targetProxy = 012FE3D626F80DCB00267124 /* PBXContainerItemProxy */;
-		};
-		012FE3E226F80DCB00267124 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 012FE3C326F80DC900267124 /* Filicker */;
-			targetProxy = 012FE3E126F80DCB00267124 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -627,6 +608,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WUQEBT7FU5;
 				INFOPLIST_FILE = FilickerTests/Info.plist;
@@ -638,6 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amirtutunchi.challenge.FilickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Filicker.app/Filicker";
@@ -649,6 +632,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WUQEBT7FU5;
 				INFOPLIST_FILE = FilickerTests/Info.plist;
@@ -663,46 +647,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Filicker.app/Filicker";
-			};
-			name = Release;
-		};
-		012FE3F026F80DCB00267124 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WUQEBT7FU5;
-				INFOPLIST_FILE = FilickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amirtutunchi.challenge.FilickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Filicker;
-			};
-			name = Debug;
-		};
-		012FE3F126F80DCB00267124 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WUQEBT7FU5;
-				INFOPLIST_FILE = FilickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amirtutunchi.challenge.FilickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Filicker;
 			};
 			name = Release;
 		};
@@ -732,15 +676,6 @@
 			buildConfigurations = (
 				012FE3ED26F80DCB00267124 /* Debug */,
 				012FE3EE26F80DCB00267124 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		012FE3EF26F80DCB00267124 /* Build configuration list for PBXNativeTarget "FilickerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				012FE3F026F80DCB00267124 /* Debug */,
-				012FE3F126F80DCB00267124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
