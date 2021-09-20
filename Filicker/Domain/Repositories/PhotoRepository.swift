@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol PhotoRepository {
-  func searchPhoto(text: String) -> AnyPublisher<ResponseBody, Error>
+  func searchPhoto(text: String, page: Int) -> AnyPublisher<ResponseBody, Error>
 }

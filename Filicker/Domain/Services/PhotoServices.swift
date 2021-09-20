@@ -13,7 +13,7 @@ class PhotoServices: PhotoRepository {
   init(api: ServiceLayer) {
     self.api = api
   }
-  func searchPhoto(text: String) -> AnyPublisher<ResponseBody, Error> {
-    return api.request(router: Router.searchImages(text: text))
+  func searchPhoto(text: String, page: Int) -> AnyPublisher<ResponseBody, Error> {
+    return api.request(router: Router.searchImages(text: text, page: page))
   }
 }

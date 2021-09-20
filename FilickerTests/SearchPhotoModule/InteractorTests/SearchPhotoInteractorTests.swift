@@ -29,7 +29,7 @@ class SearchPhotoInteractorTests: XCTestCase {
     XCTAssertNotNil(sut?.searchPhotoRepository)
   }
   func test_searchPhoto_returnResult() {
-    let publisher = sut?.searchPhoto(text: "test")
+    let publisher = sut?.searchPhoto(text: "test", page: 1)
     let expectation = XCTestExpectation(description: "Publish finish without any error")
     publisher?.sink(receiveCompletion: { failure in
       if case .finished = failure {

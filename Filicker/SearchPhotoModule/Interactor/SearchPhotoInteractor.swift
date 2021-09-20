@@ -15,8 +15,8 @@ class SearchPhotoInteractor {
     self.searchPhotoRepository = searchPhotoRepository
     self.cacheRepository = cacheRepository
   }
-  func searchPhoto(text: String) -> AnyPublisher<ResponseBody, Error> {
-    return searchPhotoRepository.searchPhoto(text: text)
+  func searchPhoto(text: String, page: Int) -> AnyPublisher<ResponseBody, Error> {
+    return searchPhotoRepository.searchPhoto(text: text, page: page)
   }
   func getAllCaches() -> [String] {
     return cacheRepository.getAllItems()

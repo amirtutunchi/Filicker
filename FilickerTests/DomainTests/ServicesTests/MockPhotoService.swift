@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 class MockPhotoService: PhotoRepository {
-  func searchPhoto(text: String) -> AnyPublisher<ResponseBody, Error> {
+  func searchPhoto(text: String, page: Int) -> AnyPublisher<ResponseBody, Error> {
     return Future<ResponseBody, Error> { promise in
       let photos = Photos.init(
         page: 1,

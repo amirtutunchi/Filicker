@@ -8,7 +8,7 @@
 import Foundation
 
 enum Router {
-  case searchImages(text: String)
+  case searchImages(text: String, page: Int)
   var scheme: String {
     return "https"
   }
@@ -26,13 +26,14 @@ enum Router {
   }
   var parameters: [URLQueryItem] {
     switch self {
-    case .searchImages(let text):
+    case .searchImages(let text, let page):
       return [
         URLQueryItem.init(name: "method", value: "flickr.photos.search"),
         URLQueryItem.init(name: "api_key", value: "11c40ef31e4961acf4f98c8ff4e945d7"),
         URLQueryItem.init(name: "format", value: "json"),
         URLQueryItem.init(name: "nojsoncallback", value: "1"),
-        URLQueryItem.init(name: "text", value: text)
+        URLQueryItem.init(name: "text", value: text),
+        URLQueryItem.init(name: "page", value: String(page))
       ]
     }
   }
