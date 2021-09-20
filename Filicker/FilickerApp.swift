@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct FilickerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      SearchPhotoModuleBuilder.build()
     }
+  }
 }

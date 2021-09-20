@@ -3,16 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		012FE3C826F80DC900267124 /* FilickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3C726F80DC900267124 /* FilickerApp.swift */; };
-		012FE3CA26F80DC900267124 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3C926F80DC900267124 /* ContentView.swift */; };
 		012FE3CC26F80DCA00267124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012FE3CB26F80DCA00267124 /* Assets.xcassets */; };
 		012FE3CF26F80DCA00267124 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012FE3CE26F80DCA00267124 /* Preview Assets.xcassets */; };
 		012FE3DA26F80DCB00267124 /* FilickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3D926F80DCB00267124 /* FilickerTests.swift */; };
 		012FE3E526F80DCB00267124 /* FilickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3E426F80DCB00267124 /* FilickerUITests.swift */; };
+		012FE3FD26F80EF900267124 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE3FC26F80EF900267124 /* PhotoRepository.swift */; };
+		012FE40526F80F1800267124 /* CacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE40426F80F1800267124 /* CacheRepository.swift */; };
+		012FE40B26F80F4E00267124 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE40A26F80F4E00267124 /* Photo.swift */; };
+		012FE41026F80F6E00267124 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE40F26F80F6E00267124 /* Photos.swift */; };
+		012FE41526F80F8700267124 /* ResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE41426F80F8700267124 /* ResponseBody.swift */; };
+		012FE41B26F8100600267124 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 012FE41A26F8100600267124 /* Kingfisher */; };
+		012FE42126F8104800267124 /* PhotoServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE42026F8104800267124 /* PhotoServices.swift */; };
+		012FE42A26F8107A00267124 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE42926F8107A00267124 /* Router.swift */; };
+		012FE42F26F8109200267124 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE42E26F8109200267124 /* ServiceError.swift */; };
+		012FE43426F810AA00267124 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE43326F810AA00267124 /* ServiceLayer.swift */; };
+		012FE43D26F814CF00267124 /* SearchPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE43C26F814CF00267124 /* SearchPhotoInteractor.swift */; };
+		012FE44226F814F300267124 /* SearchPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE44126F814F300267124 /* SearchPhotoPresenter.swift */; };
+		012FE44726F8153C00267124 /* SearchPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE44626F8153C00267124 /* SearchPhotoView.swift */; };
+		012FE44C26F8157100267124 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE44B26F8157100267124 /* SearchBarView.swift */; };
+		012FE45126F8158C00267124 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45026F8158C00267124 /* HistoryCellView.swift */; };
+		012FE45626F815AC00267124 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45526F815AC00267124 /* SearchResultView.swift */; };
+		012FE45B26F815CF00267124 /* SearchPhotoModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45A26F815CF00267124 /* SearchPhotoModuleBuilder.swift */; };
+		012FE46026F815FA00267124 /* FileCacheServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE45F26F815FA00267124 /* FileCacheServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +52,6 @@
 /* Begin PBXFileReference section */
 		012FE3C426F80DC900267124 /* Filicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012FE3C726F80DC900267124 /* FilickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilickerApp.swift; sourceTree = "<group>"; };
-		012FE3C926F80DC900267124 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		012FE3CB26F80DCA00267124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012FE3CE26F80DCA00267124 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		012FE3D026F80DCA00267124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +61,23 @@
 		012FE3E026F80DCB00267124 /* FilickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		012FE3E426F80DCB00267124 /* FilickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilickerUITests.swift; sourceTree = "<group>"; };
 		012FE3E626F80DCB00267124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012FE3FC26F80EF900267124 /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		012FE40426F80F1800267124 /* CacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheRepository.swift; sourceTree = "<group>"; };
+		012FE40A26F80F4E00267124 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		012FE40F26F80F6E00267124 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		012FE41426F80F8700267124 /* ResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBody.swift; sourceTree = "<group>"; };
+		012FE42026F8104800267124 /* PhotoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServices.swift; sourceTree = "<group>"; };
+		012FE42926F8107A00267124 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		012FE42E26F8109200267124 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		012FE43326F810AA00267124 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		012FE43C26F814CF00267124 /* SearchPhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoInteractor.swift; sourceTree = "<group>"; };
+		012FE44126F814F300267124 /* SearchPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoPresenter.swift; sourceTree = "<group>"; };
+		012FE44626F8153C00267124 /* SearchPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoView.swift; sourceTree = "<group>"; };
+		012FE44B26F8157100267124 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		012FE45026F8158C00267124 /* HistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		012FE45526F815AC00267124 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		012FE45A26F815CF00267124 /* SearchPhotoModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoModuleBuilder.swift; sourceTree = "<group>"; };
+		012FE45F26F815FA00267124 /* FileCacheServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCacheServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012FE41B26F8100600267124 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +129,10 @@
 		012FE3C626F80DC900267124 /* Filicker */ = {
 			isa = PBXGroup;
 			children = (
+				012FE43826F8149900267124 /* SearchPhotoModule */,
+				012FE42826F8105C00267124 /* Network */,
+				012FE3F926F80ED400267124 /* Domain */,
 				012FE3C726F80DC900267124 /* FilickerApp.swift */,
-				012FE3C926F80DC900267124 /* ContentView.swift */,
 				012FE3CB26F80DCA00267124 /* Assets.xcassets */,
 				012FE3D026F80DCA00267124 /* Info.plist */,
 				012FE3CD26F80DCA00267124 /* Preview Content */,
@@ -130,6 +166,92 @@
 			path = FilickerUITests;
 			sourceTree = "<group>";
 		};
+		012FE3F926F80ED400267124 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				012FE40926F80F3D00267124 /* Entities */,
+				012FE3FB26F80EE400267124 /* Repositories */,
+				012FE3FA26F80ED900267124 /* Services */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		012FE3FA26F80ED900267124 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				012FE42026F8104800267124 /* PhotoServices.swift */,
+				012FE45F26F815FA00267124 /* FileCacheServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		012FE3FB26F80EE400267124 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				012FE3FC26F80EF900267124 /* PhotoRepository.swift */,
+				012FE40426F80F1800267124 /* CacheRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		012FE40926F80F3D00267124 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				012FE40A26F80F4E00267124 /* Photo.swift */,
+				012FE40F26F80F6E00267124 /* Photos.swift */,
+				012FE41426F80F8700267124 /* ResponseBody.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		012FE42826F8105C00267124 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				012FE42926F8107A00267124 /* Router.swift */,
+				012FE42E26F8109200267124 /* ServiceError.swift */,
+				012FE43326F810AA00267124 /* ServiceLayer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		012FE43826F8149900267124 /* SearchPhotoModule */ = {
+			isa = PBXGroup;
+			children = (
+				012FE43B26F814AB00267124 /* Interactor */,
+				012FE43A26F814A400267124 /* Presenter */,
+				012FE43926F8149F00267124 /* View */,
+				012FE45A26F815CF00267124 /* SearchPhotoModuleBuilder.swift */,
+			);
+			path = SearchPhotoModule;
+			sourceTree = "<group>";
+		};
+		012FE43926F8149F00267124 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				012FE44626F8153C00267124 /* SearchPhotoView.swift */,
+				012FE44B26F8157100267124 /* SearchBarView.swift */,
+				012FE45026F8158C00267124 /* HistoryCellView.swift */,
+				012FE45526F815AC00267124 /* SearchResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		012FE43A26F814A400267124 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				012FE44126F814F300267124 /* SearchPhotoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		012FE43B26F814AB00267124 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				012FE43C26F814CF00267124 /* SearchPhotoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,12 +262,16 @@
 				012FE3C026F80DC900267124 /* Sources */,
 				012FE3C126F80DC900267124 /* Frameworks */,
 				012FE3C226F80DC900267124 /* Resources */,
+				012FE3F526F80E4300267124 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Filicker;
+			packageProductDependencies = (
+				012FE41A26F8100600267124 /* Kingfisher */,
+			);
 			productName = Filicker;
 			productReference = 012FE3C426F80DC900267124 /* Filicker.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +343,9 @@
 				Base,
 			);
 			mainGroup = 012FE3BB26F80DC900267124;
+			packageReferences = (
+				012FE41926F8100600267124 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 012FE3C526F80DC900267124 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,13 +383,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		012FE3F526F80E4300267124 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		012FE3C026F80DC900267124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012FE3CA26F80DC900267124 /* ContentView.swift in Sources */,
+				012FE42F26F8109200267124 /* ServiceError.swift in Sources */,
+				012FE41526F80F8700267124 /* ResponseBody.swift in Sources */,
+				012FE45B26F815CF00267124 /* SearchPhotoModuleBuilder.swift in Sources */,
+				012FE41026F80F6E00267124 /* Photos.swift in Sources */,
+				012FE40526F80F1800267124 /* CacheRepository.swift in Sources */,
+				012FE44226F814F300267124 /* SearchPhotoPresenter.swift in Sources */,
+				012FE46026F815FA00267124 /* FileCacheServices.swift in Sources */,
+				012FE42A26F8107A00267124 /* Router.swift in Sources */,
+				012FE42126F8104800267124 /* PhotoServices.swift in Sources */,
+				012FE3FD26F80EF900267124 /* PhotoRepository.swift in Sources */,
+				012FE43426F810AA00267124 /* ServiceLayer.swift in Sources */,
+				012FE44C26F8157100267124 /* SearchBarView.swift in Sources */,
+				012FE43D26F814CF00267124 /* SearchPhotoInteractor.swift in Sources */,
+				012FE45626F815AC00267124 /* SearchResultView.swift in Sources */,
 				012FE3C826F80DC900267124 /* FilickerApp.swift in Sources */,
+				012FE45126F8158C00267124 /* HistoryCellView.swift in Sources */,
+				012FE40B26F80F4E00267124 /* Photo.swift in Sources */,
+				012FE44726F8153C00267124 /* SearchPhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +746,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		012FE41926F8100600267124 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		012FE41A26F8100600267124 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 012FE41926F8100600267124 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 012FE3BC26F80DC900267124 /* Project object */;
 }
