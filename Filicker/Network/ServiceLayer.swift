@@ -67,11 +67,8 @@ class ServiceLayer {
     let urlRequest = createUrlRequest(router: router, components: components)
     let dataTask = session.dataTaskPublisher(for: urlRequest)
       .map {
-        let json = try! JSONSerialization.jsonObject(with: $0.data, options: .init())
-        print(json)
-        return $0.data
+        $0.data
       }
-      
       .decode(type: T.self, decoder: JSONDecoder())
       .eraseToAnyPublisher()
     return dataTask
