@@ -9,15 +9,15 @@ import Foundation
 import Combine
 
 class SearchPhotoPresenter: ObservableObject {
-  let interactor: SearchPhotoInteractor
-  @Published var array: [String] = []
+  private let interactor: SearchPhotoInteractor
+  @Published var searchHistoryList: [String] = []
   init(interactor: SearchPhotoInteractor) {
     self.interactor = interactor
     addSubscribers()
   }
-  private var page = 1
+  private(set) var page = 1
   @Published var isSearching = false
-  @Published var photoArray: [Photo] = []
+  @Published var photoList: [Photo] = []
   @Published var searchText: String = ""
   @Published var temporarySearchText: String = ""
   @Published var isLoadingPage = false
@@ -27,15 +27,14 @@ class SearchPhotoPresenter: ObservableObject {
     searchPhotoSubscriber()
     isSearchingSubscriber()
   }
-  func isSearchingSubscriber() {
+  private func isSearchingSubscriber() {
     $isSearching
       .sink { [weak self] value in
         guard let self = self else {
           return
         }
         if value {
-          print(self.interactor.getAllCaches())
-          self.array = self.interactor.getAllCaches()
+          self.searchHistoryList = self.interactor.getAllCaches()
         }
       }
       .store(in: &cancellables)
@@ -56,17 +55,17 @@ class SearchPhotoPresenter: ObservableObject {
         if refresh {
           return response.photos.photos
         } else {
-          return self.photoArray + response.photos.photos
+          return self.photoList + response.photos.photos
         }
       }
       .sink(receiveCompletion: { [weak self] failure in
         if case .failure(let error) = failure {
           print(error)
           self?.isLoadingPage = false
-          self?.photoArray = []
+          self?.photoList = []
         }
       }, receiveValue: { photos in
-        self.photoArray = photos
+        self.photoList = photos
       })
       .store(in: &cancellables)
   }
@@ -75,12 +74,12 @@ class SearchPhotoPresenter: ObservableObject {
       loadMoreContent(searchKey: searchText)
       return
     }
-    let thresholdIndex = photoArray.index(photoArray.endIndex, offsetBy: -5)
-    if photoArray.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
+    let thresholdIndex = photoList.index(photoList.endIndex, offsetBy: -5)
+    if photoList.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
       loadMoreContent(searchKey: searchText)
     }
   }
-  func searchPhotoSubscriber() {
+  private func searchPhotoSubscriber() {
     $searchText
       .sink {[weak self] in
         guard let self = self else { return }
@@ -95,7 +94,7 @@ class SearchPhotoPresenter: ObservableObject {
   }
   func resetPresenter() {
     self.page = 1
-    self.photoArray = []
+    self.photoList = []
     self.isLoadingPage = false
   }
 }

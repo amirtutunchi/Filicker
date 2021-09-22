@@ -16,7 +16,7 @@ struct SearchPhotoView: View {
     SearchBarView(presenter: presenter)
     ScrollView {
       if presenter.isSearching {
-        ForEach(presenter.array, id: \.self) { item in
+        ForEach(presenter.searchHistoryList, id: \.self) { item in
           Button(
             action: {
               presenter.temporarySearchText = item
@@ -37,7 +37,7 @@ struct SearchPhotoView: View {
             GridItem(.flexible(minimum: 100, maximum: 300), spacing: 16),
             GridItem(.flexible(minimum: 100, maximum: 300), spacing: 16)
           ]) {
-          ForEach(presenter.photoArray) { photo in
+          ForEach(presenter.photoList) { photo in
             SearchResultView(photo: photo)
               .onAppear {
                 presenter.loadMoreContentIfNeeded(currentItem: photo)

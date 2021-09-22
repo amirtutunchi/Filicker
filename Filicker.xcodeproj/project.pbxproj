@@ -32,6 +32,7 @@
 		012FE47526F8301E00267124 /* MockPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE47426F8301E00267124 /* MockPhoto.swift */; };
 		012FE47D26F8336000267124 /* SearchPhotoInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE47C26F8336000267124 /* SearchPhotoInteractorTests.swift */; };
 		012FE48326F8343E00267124 /* MockCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FE48226F8343E00267124 /* MockCacheService.swift */; };
+		01ACB1D226FAD29100ADCA04 /* SearchPhotoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACB1D126FAD29100ADCA04 /* SearchPhotoPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		012FE47426F8301E00267124 /* MockPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhoto.swift; sourceTree = "<group>"; };
 		012FE47C26F8336000267124 /* SearchPhotoInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoInteractorTests.swift; sourceTree = "<group>"; };
 		012FE48226F8343E00267124 /* MockCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCacheService.swift; sourceTree = "<group>"; };
+		01ACB1D126FAD29100ADCA04 /* SearchPhotoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		012FE47A26F8333E00267124 /* SearchPhotoModule */ = {
 			isa = PBXGroup;
 			children = (
+				01ACB1D026FAD27200ADCA04 /* PresenterTests */,
 				012FE47B26F8334400267124 /* InteractorTests */,
 			);
 			path = SearchPhotoModule;
@@ -270,6 +273,14 @@
 				012FE47C26F8336000267124 /* SearchPhotoInteractorTests.swift */,
 			);
 			path = InteractorTests;
+			sourceTree = "<group>";
+		};
+		01ACB1D026FAD27200ADCA04 /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				01ACB1D126FAD29100ADCA04 /* SearchPhotoPresenterTests.swift */,
+			);
+			path = PresenterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +440,7 @@
 				012FE47526F8301E00267124 /* MockPhoto.swift in Sources */,
 				012FE47D26F8336000267124 /* SearchPhotoInteractorTests.swift in Sources */,
 				012FE47026F82FE700267124 /* MockPhotoService.swift in Sources */,
+				01ACB1D226FAD29100ADCA04 /* SearchPhotoPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
