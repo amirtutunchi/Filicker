@@ -40,7 +40,7 @@ struct SearchPhotoView: View {
           ForEach(presenter.photoList) { photo in
             SearchResultView(photo: photo)
               .onAppear {
-                presenter.loadMoreContentIfNeeded(currentItem: photo)
+                presenter.loadMorePhotoIfNeeded(currentItem: photo)
               }
           }
         }

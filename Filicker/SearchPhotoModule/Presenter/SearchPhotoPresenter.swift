@@ -27,6 +27,7 @@ class SearchPhotoPresenter: ObservableObject {
     searchPhotoSubscriber()
     isSearchingSubscriber()
   }
+  /// this function get search history and set it to searchHistoryList when user start searching
   private func isSearchingSubscriber() {
     $isSearching
       .sink { [weak self] value in
@@ -39,7 +40,11 @@ class SearchPhotoPresenter: ObservableObject {
       }
       .store(in: &cancellables)
   }
-  private func loadMoreContent(searchKey: String, refresh: Bool = false) {
+  /// This function load photo with search key if we can load more photo and isLoadingPage is false
+  /// - Parameters:
+  ///   - searchKey: the search text user typing
+  ///   - refresh: this variable indicates that does the search result need to be append to previous result or not
+  private func loadPhoto(searchKey: String, refresh: Bool = false) {
     guard !isLoadingPage && canLoadMorePages else {
       return
     }
@@ -69,14 +74,14 @@ class SearchPhotoPresenter: ObservableObject {
       })
       .store(in: &cancellables)
   }
-  func loadMoreContentIfNeeded(currentItem item: Photo?) {
+  func loadMorePhotoIfNeeded(currentItem item: Photo?) {
     guard let item = item else {
-      loadMoreContent(searchKey: searchText)
+      loadPhoto(searchKey: searchText)
       return
     }
     let thresholdIndex = photoList.index(photoList.endIndex, offsetBy: -5)
     if photoList.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
-      loadMoreContent(searchKey: searchText)
+      loadPhoto(searchKey: searchText)
     }
   }
   private func searchPhotoSubscriber() {
@@ -88,7 +93,7 @@ class SearchPhotoPresenter: ObservableObject {
           return
         }
         self.interactor.addItemToCache(text: $0)
-        self.loadMoreContent(searchKey: $0, refresh: true)
+        self.loadPhoto(searchKey: $0, refresh: true)
       }
       .store(in: &cancellables)
   }
