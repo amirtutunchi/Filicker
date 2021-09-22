@@ -11,6 +11,7 @@ import Combine
 
 class SearchPhotoInteractorTests: XCTestCase {
   var sut: SearchPhotoInteractor?
+  private let spyText = "Spy"
   private var cancellables = Set<AnyCancellable>()
   override func setUpWithError() throws {
     try super.setUpWithError()
@@ -23,10 +24,6 @@ class SearchPhotoInteractorTests: XCTestCase {
   override func tearDownWithError() throws {
     try super.tearDownWithError()
     sut = nil
-  }
-  func test_init_correctly() {
-    XCTAssertNotNil(sut?.cacheRepository)
-    XCTAssertNotNil(sut?.searchPhotoRepository)
   }
   func test_searchPhoto_returnResult() {
     let publisher = sut?.searchPhoto(text: "test", page: 1)
@@ -42,5 +39,10 @@ class SearchPhotoInteractorTests: XCTestCase {
       XCTAssert(responseBody.photos.photos[0].urlString == MockPhoto.photoArray[0].urlString)
     })
     .store(in: &cancellables)
+  }
+  func test_addAndGetItemToCache_worksCorrectly() {
+    sut?.addItemToCache(text: spyText)
+    let cache = sut?.getAllCaches()
+    XCTAssert(cache?.contains(spyText) ?? false)
   }
 }
