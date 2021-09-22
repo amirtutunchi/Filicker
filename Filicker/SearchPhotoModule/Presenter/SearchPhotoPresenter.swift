@@ -23,8 +23,8 @@ class SearchPhotoPresenter: ObservableObject {
   @Published var isLoadingPage = false
   private var canLoadMorePages = true
   private var cancellables = Set<AnyCancellable>()
-  func addSubscribers() {
-    searchPhoto()
+  private func addSubscribers() {
+    searchPhotoSubscriber()
     isSearchingSubscriber()
   }
   func isSearchingSubscriber() {
@@ -41,7 +41,7 @@ class SearchPhotoPresenter: ObservableObject {
       .store(in: &cancellables)
   }
   private func loadMoreContent(searchKey: String, refresh: Bool = false) {
-    guard !isLoadingPage && canLoadMorePages && !searchKey.isEmpty else {
+    guard !isLoadingPage && canLoadMorePages else {
       return
     }
     isLoadingPage = true
@@ -80,20 +80,22 @@ class SearchPhotoPresenter: ObservableObject {
       loadMoreContent(searchKey: searchText)
     }
   }
-  func searchPhoto() {
+  func searchPhotoSubscriber() {
     $searchText
       .sink {[weak self] in
         guard let self = self else { return }
+        self.resetPresenter()
         if $0.isEmpty {
-          self.photoArray = []
           return
         }
-        self.isLoadingPage = false
         self.interactor.addItemToCache(text: $0)
-        self.page = 1
-        self.photoArray = []
         self.loadMoreContent(searchKey: $0, refresh: true)
       }
       .store(in: &cancellables)
+  }
+  func resetPresenter() {
+    self.page = 1
+    self.photoArray = []
+    self.isLoadingPage = false
   }
 }

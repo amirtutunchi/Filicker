@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 class SearchPhotoInteractor {
-  let searchPhotoRepository: PhotoRepository
-  let cacheRepository: CacheRepository
+  private let searchPhotoRepository: PhotoRepository
+  private let cacheRepository: CacheRepository
   init(searchPhotoRepository: PhotoRepository, cacheRepository: CacheRepository) {
     self.searchPhotoRepository = searchPhotoRepository
     self.cacheRepository = cacheRepository
