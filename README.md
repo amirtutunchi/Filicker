@@ -13,7 +13,7 @@ I just use SPM so after opening Xcode and opening the project and downloading de
 I use viper with Swiftui and Combine framework for doing this challenge. my main reason for choosing viper is it gives you more flexibility and more testability. It was so much valuable and interesting for me. I always try to push limits and using this architecture is so much fun🍻🍻
 
 ## Unit-Tests
-As you can see I tried to write some unit tests but unfortunately test coverage is not high. I try my best in approximately six hours and I continue writing more tests on a diffrent branch in order to go an extra mile.
+As you can see I tried to write some unit tests but unfortunately test coverage is not high. I try my best in approximately seven hours and I continue writing more tests on a diffrent branch in order to go an extra mile.
 
 ## CI/CD
 For CI as you can see i used github action to build and run tests when ever anything commit on main branch
